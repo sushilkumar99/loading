@@ -1,0 +1,38 @@
+*{
+	margin: 0;padding: 0;box-sizing: border-box;
+}
+.container{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #001300;
+	position: relative;
+}
+.loading-box{
+	position: relative;
+	display: flex;
+}
+.dot{
+	position: relative;
+	width: 20px;
+	height: 20px;
+	background-color: #fff;
+	margin: 20px 10px;
+	border-radius: 50%;
+	transform: scale(.08);
+	animation: animate 2s linear infinite;
+	animation-delay: calc(.1s * var(--i));
+}
+@keyframes animate{
+	0%{
+		transform: scale(.05);
+	}
+	10%{
+		transform: scale(1);
+	}
+	50%,100%{
+		transform: scale(.05);
+	}
+}
